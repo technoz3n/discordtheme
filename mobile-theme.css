@@ -1,0 +1,198 @@
+{
+  "name": "monolith",
+  "description": "sleek material-inspired dark theme. rubik font, material symbols icon accents, floating rounded panels, oklch violet accent.",
+  "authors": [
+    {
+      "name": "technoz3n",
+      "id": "0"
+    }
+  ],
+  "semanticColors": {
+    "ANDROID_RIPPLE": [
+      "#1e1b2e"
+    ],
+    "CHAT_BACKGROUND": [
+      "#171523"
+    ],
+    "HEADER_PRIMARY": [
+      "#efedfa"
+    ],
+    "HEADER_SECONDARY": [
+      "#afabc7"
+    ],
+    "TEXT_NORMAL": [
+      "#efedfa"
+    ],
+    "TEXT_MUTED": [
+      "#48435d"
+    ],
+    "TEXT_PRIMARY": [
+      "#efedfa"
+    ],
+    "TEXT_LINK": [
+      "#c79bf2"
+    ],
+    "INTERACTIVE_NORMAL": [
+      "#8e88a8"
+    ],
+    "INTERACTIVE_HOVER": [
+      "#afabc7"
+    ],
+    "INTERACTIVE_ACTIVE": [
+      "#efedfa"
+    ],
+    "INTERACTIVE_MUTED": [
+      "#48435d"
+    ],
+    "BACKGROUND_PRIMARY": [
+      "#171523"
+    ],
+    "BACKGROUND_SECONDARY": [
+      "#13111d"
+    ],
+    "BACKGROUND_SECONDARY_ALT": [
+      "#171523"
+    ],
+    "BACKGROUND_TERTIARY": [
+      "#262338"
+    ],
+    "BACKGROUND_ACCENT": [
+      "#1f1c2d"
+    ],
+    "BACKGROUND_MOBILE_PRIMARY": [
+      "#100e18"
+    ],
+    "BACKGROUND_MOBILE_SECONDARY": [
+      "#13111d"
+    ],
+    "BACKGROUND_NESTED_FLOATING": [
+      "#100e18"
+    ],
+    "BACKGROUND_MESSAGE_HOVER": [
+      "#0000001f"
+    ],
+    "BACKGROUND_MODIFIER_HOVER": [
+      "#714ce017"
+    ],
+    "BACKGROUND_MODIFIER_ACTIVE": [
+      "#714ce029"
+    ],
+    "BACKGROUND_MODIFIER_SELECTED": [
+      "#714ce042"
+    ],
+    "BACKGROUND_MODIFIER_ACCENT": [
+      "#1f1c2d"
+    ],
+    "BACKGROUND_MENTIONED": [
+      "#b286f31a"
+    ],
+    "CARD_PRIMARY_BG": [
+      "#13111d"
+    ],
+    "CARD_SECONDARY_BG": [
+      "#171523"
+    ],
+    "BG_BASE_PRIMARY": [
+      "#171523"
+    ],
+    "BG_BASE_SECONDARY": [
+      "#13111d"
+    ],
+    "BG_BASE_TERTIARY": [
+      "#100e18"
+    ],
+    "BG_BACKDROP": [
+      "#000000b2"
+    ],
+    "REDESIGN_ACTIVITY_CARD_BACKGROUND": [
+      "#171523"
+    ],
+    "REDESIGN_BUTTON_PRIMARY_BACKGROUND": [
+      "#b286f3"
+    ],
+    "REDESIGN_BUTTON_PRIMARY_PRESSED_BACKGROUND": [
+      "#9753ed"
+    ],
+    "REDESIGN_BUTTON_SECONDARY_BACKGROUND": [
+      "#1f1c2d"
+    ],
+    "REDESIGN_BUTTON_SECONDARY_BORDER": [
+      "#62598c33"
+    ],
+    "REDESIGN_BUTTON_TERTIARY_BACKGROUND": [
+      "#171523"
+    ],
+    "REDESIGN_CHANNEL_CATEGORY_NAME_TEXT": [
+      "#8e88a8"
+    ],
+    "REDESIGN_CHANNEL_NAME_TEXT": [
+      "#afabc7"
+    ],
+    "REDESIGN_CHAT_INPUT_BACKGROUND": [
+      "#171523"
+    ],
+    "CHANNELS_DEFAULT": [
+      "#6f698c"
+    ],
+    "CHANNEL_ICON": [
+      "#6f698c"
+    ],
+    "THREAD_CHANNEL_SPINE": [
+      "#48435d"
+    ]
+  },
+  "rawColors": {
+    "BLACK": "#100e18",
+    "WHITE": "#efedfa",
+    "WHITE_500": "#efedfa",
+    "WHITE_630": "#8e88a8",
+    "PRIMARY_100": "#efedfa",
+    "PRIMARY_200": "#c79bf2",
+    "PRIMARY_300": "#afabc7",
+    "PRIMARY_330": "#8e88a8",
+    "PRIMARY_360": "#6f698c",
+    "PRIMARY_400": "#48435d",
+    "PRIMARY_460": "#262338",
+    "PRIMARY_500": "#1f1c2d",
+    "PRIMARY_600": "#171523",
+    "PRIMARY_630": "#171523",
+    "PRIMARY_645": "#13111d",
+    "PRIMARY_660": "#13111d",
+    "PRIMARY_700": "#100e18",
+    "PRIMARY_800": "#100e18",
+    "BRAND_260": "#c79bf2",
+    "BRAND_360": "#b286f3",
+    "BRAND_500": "#b286f3",
+    "BRAND_560": "#9753ed",
+    "GREEN_360": "#34cf7c",
+    "GREEN_400": "#34cf7c",
+    "GREEN_500": "#34cf7c",
+    "RED_360": "#f5384c",
+    "RED_400": "#f5384c",
+    "RED_500": "#f5384c",
+    "YELLOW_360": "#e3a027",
+    "YELLOW_400": "#e3a027",
+    "YELLOW_500": "#e3a027"
+  },
+  "plus": {
+    "version": "0",
+    "customOverlays": true,
+    "mentionLineColor": "#f5384c",
+    "icons": {
+      "ic_radio_circle_checked": "#b286f3",
+      "ic_radio_circle_checked__overlay": "#100e18",
+      "ic_radio_square_24px": "#b286f3",
+      "ic_radio_square_checked_24px": "#b286f3",
+      "ic_radio_square_checked_24px__overlay": "#100e18",
+      "ic_selection_checked_24px": "#b286f3",
+      "ic_selection_checked_24px__overlay": "#100e18",
+      "StatusMobileOnline": "#34cf7c",
+      "StatusIdle": "#e3a027",
+      "StatusDND": "#f5384c",
+      "StatusOffline": "#6f698c",
+      "StatusOnline": "#34cf7c",
+      "StatusStreaming": "#de34cf"
+    }
+  },
+  "spec": 2
+}
