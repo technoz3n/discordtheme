@@ -102,6 +102,10 @@ div[class*="-listItem"]:has(div[class*="-guildSeparator"]) {
 [class*="-tutorialContainer"] {
     padding-bottom: var(--space-xs) !important;
 }
+/ * IIII had to fix this oen niko because your discover button did NOT hide infact actually */
+.listItem__650eb {
+  display: none;
+}
 /* panel separation */
 .container__89463 > .toolbar__89463,
 .container__89463 > .contentContainer__89463,
