@@ -36,9 +36,6 @@ body {
   --window-control-size: 14px;
   --window-controls-padding: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
 }
-{
-  display: none;
-}
 
 
 /* "borrowed" code from niko */
@@ -111,31 +108,87 @@ div[class*="listItemWrapper"]:has([data-list-item-id*="guild-discover"]) {
 }
 
 /* remove gift button etc from chatbox */
-div[class*="listItemWrapper"]:has([aria-label="Send a gift"]) {
-    display: none !important;
-}
 /* hide the actual gift button element for extra fuckery */
 .button__24af7 {
   display: none !important;
 }
 
 /* hide events and boosts because fuck you */
-div[class*="listItemWrapper"]:has([aria-label="Server Boosts"]) {
-    display: none !important;
-}
-div[class*="listItemWrapper"]:has([aria-label="Events"]) {
-    display: none !important;
-}
+/* boosts container VVVVVVVV */
 .container__877f0 {
   display: none !important;
 }
-
-/* fix the gif picker thing */
-.contentWrapper__08434 {
-  grid-template-columns: auto !important;
+li:has(#upcoming-events),
+li:has([data-list-item-id*="upcoming-events"]),
+div[class*="containerDefault_"]:has([id*="upcoming-events"]) {
+  display: none !important;
 }
-.drawerSizingWrapper__08434 {
-  width: auto !important;
+
+div[class*="sectionDivider_"] {
+  display: none !important;
+}
+ul[aria-label="Channels"] > div[style*="height: 12px"] {
+  display: none !important;
+}
+ul[aria-label="Channels"] {
+  padding-top: 8px !important;
+}
+
+/* good fucking riddance emoji picker bullshit holy this was so annoying to fix */
+div[class*="positionLayer_"][class*="expressionPickerPositionLayer_"],
+div[class*="positionContainer_"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+div[class*="drawerSizingWrapper_"] {
+  width: fit-content !important;
+  margin-right: auto !important;
+  margin-left: 0 !important;
+  background-color: var(--background-surface-high, var(--background-secondary)) !important;
+  border: 1px solid var(--border-subtle) !important;
+  border-radius: var(--radius-lg, 8px) !important;
+  box-shadow: var(--shadow-high) !important;
+}
+
+div[class*="contentWrapper_"] {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  background: transparent !important;
+  padding-right: 8px !important;
+  padding-left: 8px !important;
+  width: fit-content !important;
+}
+
+nav[class*="nav_"] {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 auto !important;
+}
+
+div[class*="navList_"] {
+  display: flex !important;
+  justify-content: center !important;
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+div[class*="header_c0e32c"],
+div[class*="header_"] {
+  min-height: 48px !important;
+  height: auto !important;
+  padding-top: 1px !important;
+  padding-bottom: 1px !important;
+}
+div[class*="bodyWrapper_c0e32c"],
+div[class*="bodyWrapper_"] {
+  margin-top: 4px !important;
 }
 /* panel separation */
 .container__89463 > .toolbar__89463,
