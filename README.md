@@ -1,3 +1,3 @@
 # discordtheme
 my discor  thme
-![(dusky.png)]
+![dusky](dusky.png)
