@@ -103,11 +103,10 @@ div[class*="-listItem"]:has(div[class*="-guildSeparator"]) {
     padding-bottom: var(--space-xs) !important;
 }
 /* IIII had to fix this oen niko because your discover button did NOT hide infact actually */
-.listItemWrapper_91816 {
-  display: none;
-}
-.listItemWrapper__91816 {
-  display: none;
+/* target ONLY the wrapper that contains the discover icon/aria-label */
+div[class*="listItemWrapper"]:has([aria-label="Discover"]),
+div[class*="listItemWrapper"]:has([data-list-item-id*="guild-discover"]) {
+    display: none !important;
 }
 /* panel separation */
 .container__89463 > .toolbar__89463,
