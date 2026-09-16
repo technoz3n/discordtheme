@@ -37,6 +37,71 @@ body {
   --window-controls-padding: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
 }
 
+/* "borrowed" code from niko */
+[class*="-inner"] > [class*="-buttons"] > div:nth-of-type(2), [class*="-inner"] > [class*="-buttons"] > div:nth-of-type(3), [class^="-inner"] > [class^="-buttons"] > button {
+    display: none;
+}
+[class^="recentsIcon"] {
+    display: none !important;
+}
+[href="https://support.discord.com"] {
+    display: none !important;
+}
+#channel-attach-listen {
+    display: none;
+}
+#user-context-note {
+    display: none;
+}
+#user-context-close-dm {
+    display: none;
+}
+#user-context-invite-to-server {
+    display: none;
+}
+#message-apps {
+    display: none;
+}
+#user-context-mark-channel-read[aria-disabled="true"] {
+    display: none;
+}
+#guild-context-mark-guild-read[aria-disabled="true"] {
+    display: none;
+}
+#channel-context-mark-channel-read[aria-disabled="true"] {
+    display: none;
+}
+#message-mark-unread {
+    display: none;
+}
+div[role="separator"] {
+    display: none;
+}
+div[data-list-id*="private-channels-"] > ul > div:nth-of-type(2), 
+div[data-list-id*="private-channels-"] > ul > div:nth-of-type(3) {
+  display: none;
+}
+li div[class*="-containerDefault"][class*="-wrapper"] {
+    display: none;
+}
+div[class*="-sectionDivider"] {
+    display: none !important;
+}
+div[style="height: 12px;"], div[style="height: 8px;"] {
+    display: none;
+}
+[class*="-container"][class*="-containerWithMargin"] {
+    display: none;
+}
+[data-list-id="guildsnav"] > div > div > div[class*="-listItem"]:nth-last-child(2) {
+  display: none;
+}
+div[class*="-listItem"]:has(div[class*="-guildSeparator"]) {
+    display: none;
+}
+[class*="-tutorialContainer"] {
+    padding-bottom: var(--space-xs) !important;
+}
 /* panel separation */
 .container__89463 > .toolbar__89463,
 .container__89463 > .contentContainer__89463,
