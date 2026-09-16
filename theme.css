@@ -102,7 +102,7 @@ div[class*="-listItem"]:has(div[class*="-guildSeparator"]) {
 [class*="-tutorialContainer"] {
     padding-bottom: var(--space-xs) !important;
 }
-/ * IIII had to fix this oen niko because your discover button did NOT hide infact actually */
+/* IIII had to fix this oen niko because your discover button did NOT hide infact actually */
 .listItem__650eb {
   display: none;
 }
