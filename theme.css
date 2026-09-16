@@ -1,7 +1,7 @@
 /**
  * @name dusky
  * @author technoz3n
- * @version 2.0.0
+ * @version 2.1.0
  * @description sleek material-inspired muted theme. rubik font, material symbols icon accents,
  * floating rounded panels, oklch violet accent. layout/panel architecture forked from
  * refact0r's midnight-discord (FOSS) — colors, fonts, icons and effects are custom.
@@ -208,10 +208,11 @@ div[class*="listItemWrapper"]:has([data-list-item-id*="guild-discover"]) {
   --bg-2: hsl(248, 16%, 15%);
   --bg-3: hsl(248, 16%, 12%);
   --bg-4: hsl(248, 18%, 8%);
-  --hover: hsla(255, 25%, 55%, 0.09);
-  --active: hsla(255, 25%, 55%, 0.16);
-  --active-2: hsla(255, 25%, 55%, 0.26);
-  --message-hover: hsla(255, 0%, 0%, 0.12);
+
+  --hover: color-mix(in hsl, var(--accent-1), transparent 91%);
+  --active: color-mix(in hsl, var(--accent-1), transparent 84%);
+  --active-2: color-mix(in hsl, var(--accent-1), transparent 74%);
+  --message-hover: color-mix(in hsl, var(--text-1), transparent 88%);
 
   --accent-1: var(--violet-1);
   --accent-2: var(--violet-2);
@@ -388,22 +389,110 @@ rect[fill='#9147ff'] { fill: var(--streaming); }
 .divider__908e2 { border-width: var(--divider-thickness); border-radius: var(--divider-thickness); }
 .endCap__908e2 { margin-top: calc(var(--divider-thickness) / -2); }
 
-/* hover motion on channel/dm/member list rows */
-.wrapper__2ea32 .link__2ea32,
-.container__91a9d,
-.channel__972a0,
-.side_aa8da2 .item_aa8da2 {
-  transition: margin-right var(--list-item-transition);
-  will-change: margin-right;
-}
-.wrapper__2ea32:hover .link__2ea32,
-.side_aa8da2 .item_aa8da2:hover { margin-right: 10px; }
-.container__91a9d:hover,
-.channel__972a0:hover { margin-right: 18px; }
-
 /* message fade-in */
 .message__5126c { animation: mono-fade-in 0.5s ease-out; }
 @keyframes mono-fade-in {
   from { opacity: 0; transform: translateY(3px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+.wrapper__2ea32 .link__2ea32,
+.container__91a9d,
+.channel__972a0,
+.side_aa8da2 .item_aa8da2 {
+  position: relative;
+  transform: scale(1);
+  transform-origin: center left;
+  transition: transform var(--list-item-transition), background-color var(--list-item-transition);
+  will-change: transform;
+}
+
+.wrapper__2ea32 .link__2ea32::before,
+.container__91a9d::before,
+.channel__972a0::before,
+.side_aa8da2 .item_aa8da2::before {
+  content: "";
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  width: 3px;
+  height: 0%;
+  border-radius: 4px;
+  background: var(--accent-2);
+  transform: translateY(-50%);
+  transition: height var(--list-item-transition);
+}
+
+.wrapper__2ea32:hover .link__2ea32,
+.container__91a9d:hover,
+.channel__972a0:hover,
+.side_aa8da2 .item_aa8da2:hover {
+  transform: scale(1.02);
+}
+
+.wrapper__2ea32:hover .link__2ea32::before,
+.container__91a9d:hover::before,
+.channel__972a0:hover::before,
+.side_aa8da2 .item_aa8da2:hover::before {
+  height: 55%;
+}
+
+.wrapper__2ea32.selected__2ea32 .link__2ea32::before,
+.container__91a9d.selected__91a9d::before {
+  height: 65%;
+  background: var(--accent-1);
+}
+
+code, .hljs, [class*="codeBlock"], [class*="markup"] pre {
+  border-radius: var(--radius-sm);
+  border: var(--border-thickness) solid var(--border-light);
+  background: var(--bg-3) !important;
+}
+
+[class*="spoilerContent"], [class*="spoilerText"] {
+  border-radius: var(--radius-sm);
+}
+[class*="spoilerText"]:not([class*="spoilerTextVisible"]) {
+  background: color-mix(in hsl, var(--accent-2), var(--bg-2) 80%) !important;
+}
+
+[class*="embedFull"] {
+  border-left-color: var(--accent-2) !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-sm);
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+[class*="standardSidebarView"] [class*="sidebar"] {
+  background: var(--bg-4);
+  border-radius: var(--radius-lg);
+  border: var(--border-thickness) solid var(--border);
+  margin: var(--gap) 0 var(--gap) var(--gap);
+}
+[class*="standardSidebarView"] [class*="contentColumn"],
+[class*="standardSidebarView"] [class*="contentRegion"] {
+  background: var(--bg-3);
+  border-radius: var(--radius-lg);
+  border: var(--border-thickness) solid var(--border);
+  margin: var(--gap);
+}
+
+[class*="userPopout"], [class*="popoutContent"], [class*="emojiPicker"],
+[class*="gifPickerContainer"], [class*="stickerPicker"], [class*="expressionPicker"] {
+  background: var(--bg-4) !important;
+  border-radius: var(--radius-lg) !important;
+  border: var(--border-thickness) solid var(--border);
+}
+
+[class*="videoWrapper"], [class*="tile__"], [class*="frame__"] {
+  border-radius: var(--radius-md) !important;
+  overflow: hidden;
+  border: var(--border-thickness) solid var(--border);
 }
