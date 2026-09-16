@@ -36,11 +36,12 @@ body {
   --window-control-size: 14px;
   --window-controls-padding: calc(var(--gap) - (var(--window-control-size) / 2) + 1px);
 }
+{
+  display: none;
+}
+
 
 /* "borrowed" code from niko */
-[class*="-inner"] > [class*="-buttons"] > div:nth-of-type(2), [class*="-inner"] > [class*="-buttons"] > div:nth-of-type(3), [class^="-inner"] > [class^="-buttons"] > button {
-    display: none;
-}
 [class^="recentsIcon"] {
     display: none !important;
 }
@@ -107,6 +108,34 @@ div[class*="-listItem"]:has(div[class*="-guildSeparator"]) {
 div[class*="listItemWrapper"]:has([aria-label="Discover"]),
 div[class*="listItemWrapper"]:has([data-list-item-id*="guild-discover"]) {
     display: none !important;
+}
+
+/* remove gift button etc from chatbox */
+div[class*="listItemWrapper"]:has([aria-label="Send a gift"]) {
+    display: none !important;
+}
+/* hide the actual gift button element for extra fuckery */
+.button__24af7 {
+  display: none !important;
+}
+
+/* hide events and boosts because fuck you */
+div[class*="listItemWrapper"]:has([aria-label="Server Boosts"]) {
+    display: none !important;
+}
+div[class*="listItemWrapper"]:has([aria-label="Events"]) {
+    display: none !important;
+}
+.container__877f0 {
+  display: none !important;
+}
+
+/* fix the gif picker thing */
+.contentWrapper__08434 {
+  grid-template-columns: auto !important;
+}
+.drawerSizingWrapper__08434 {
+  width: auto !important;
 }
 /* panel separation */
 .container__89463 > .toolbar__89463,
