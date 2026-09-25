@@ -552,27 +552,22 @@ code, .hljs, [class*="codeBlock"], [class*="markup"] pre {
   background-clip: padding-box;
 }
 
-[class*="standardSidebarView"] [class*="sidebar"] {
-  background: var(--bg-4);
-  border-radius: var(--radius-lg);
-  border: var(--border-thickness) solid var(--border);
+[class*="sidebarRegion"] {
   margin: var(--gap) 0 var(--gap) var(--gap);
+  border: var(--border-thickness) solid transparent;
+  box-sizing: border-box;
 }
-[class*="standardSidebarView"] [class*="contentColumn"],
-[class*="standardSidebarView"] [class*="contentRegion"] {
+[class*="standardSidebarView"] [class*="contentColumn"] {
   background: var(--bg-3);
   border-radius: var(--radius-lg);
   border: var(--border-thickness) solid var(--border);
   margin: var(--gap);
 }
-
-[class*="userPopout"], [class*="popoutContent"], [class*="emojiPicker"],
-[class*="gifPickerContainer"], [class*="stickerPicker"], [class*="expressionPicker"] {
-  background: var(--bg-4) !important;
-  border-radius: var(--radius-lg) !important;
-  border: var(--border-thickness) solid var(--border);
+[class*="standardSidebarView"] [class*="contentColumn"] [class*="contentRegion"] {
+  background: none;
+  border: none;
+  margin: 0;
 }
-
 [class*="videoWrapper"], [class*="tile__"], [class*="frame__"] {
   border-radius: var(--radius-md) !important;
   overflow: hidden;
